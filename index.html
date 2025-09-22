@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Joseph Bello Acurin — Portfolio</title>
+  <style>
+    :root{
+      --bg:#f1f5f9; /* slate-50 */
+      --card:#ffffff;
+      --muted:#6b7280; /* slate-500 */
+      --accent:#0f172a; /* slate-900 */
+      --pill-border:#e5e7eb;
+      --radius:20px;
+      --gap:20px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
+
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    h1{font-size:26px;margin:0;font-weight:700}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;border:1px solid #d1d5db;font-size:14px}
+    .btn-primary{background:var(--accent);color:#fff;border:none}
+
+    main{display:grid;grid-template-columns:320px 1fr;gap:var(--gap);margin-top:28px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 1px 2px rgba(2,6,23,0.06)}
+
+    /* Left column */
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid var(--pill-border);font-size:12px;display:inline-block}
+    ul{padding-left:18px;margin:6px 0}
+
+    /* Right column */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+    .project{padding:12px;border-radius:12px;border:1px solid #eef2f6}
+    .muted-xs{font-size:12px;color:var(--muted)}
+
+    footer{margin-top:28px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr;}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+
+    /* Data model table list styling */
+    .model-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+    .model-item{padding:10px;border-radius:10px;border:1px dashed #e6edf3;background:#fbfcfe}
+    .model-item b{display:inline-block;margin-bottom:6px}
+
+    .contact-row{display:flex;gap:12px;align-items:center;margin-top:12px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Mark Joseph Bello Acurin</h1>
+        <div class="subtitle">Data & Business Intelligence — Quezon City, Philippines</div>
+      </div>
+      <div class="contact-row">
+        <a class="btn btn-primary" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <aside class="card">
+        <h2 style="margin:0 0 8px 0;font-size:16px">About</h2>
+        <p style="margin:0;color:#334155;font-size:14px">I'm Mark — a Data & Business Intelligence professional with hands-on experience in Power BI, Tableau, SQL, and analytics workflows. I turn messy data into actionable dashboards and clear business insights.</p>
+
+        <div style="margin-top:16px">
+          <h3 style="margin:0 0 8px 0;font-size:13px;color:var(--muted)">Contact</h3>
+          <ul style="margin:0">
+            <li><a href="mailto:acurinmarkjoseph@gmail.com" style="margin:0 0 8px 0;font-size:13px;color:#0000FF" >acurinmarkjoseph@gmail.com</a></li>
+            <li><a style="margin:0 0 8px 0;font-size:13px;color:var(--muted)" >0977-153-6036</a></li>
+            <li><a style="margin:0 0 8px 0;font-size:13px;color:var(--muted)" >Lizardo St., Project 4, Quezon City</a></li>
+          </ul>
+        </div>
+
+        <div style="margin-top:16px">
+          <h3 style="margin:0 0 8px 0;font-size:13px;color:var(--muted)" >Skills</h3>
+          <div class="skills-grid">
+            <span class="pill">Power BI</span>
+            <span class="pill">Tableau</span>
+            <span class="pill">SQL / Databricks</span>
+            <span class="pill">DAX</span>
+            <span class="pill">Dashboard Design</span>
+            <span class="pill">Data Modelling</span>
+            <span class="pill">Python (basic)</span>
+            <span class="pill">Analytics</span>
+          </div>
+        </div>
+      </aside>
+
+      <section>
+        <div class="card">
+          <h2 style="margin:0 0 6px 0;font-size:16px">Featured Projects</h2>
+          <div class="muted-xs">A selection of dashboards, ETL work and analytics solutions I built.</div>
+          <!-- -->
+          <div class="projects">
+            <div class="project">
+              <h4 style="margin:0 0 6px 0">Attendee Analytics Dashboard</h4>
+              <div class="muted-xs">End-to-end attendee reporting for events: session tracking, retention validation, and source analysis using Power BI with Databricks connection.</div>
+              <div class="muted-xs" style="margin-top:8px">Tools: Power BI, SQL, DAX, Databricks</div>
+            </div>
+            <!-- -->
+            <div class="project">
+              <h4 style="margin:0 0 6px 0">Registration QA & ETL</h4>
+              <div class="muted-xs">SQL-based validation pipelines to detect duplicate primary keys, status flags and data quality issues across registration systems. Connected with Databricks for validation workflows.</div>
+              <div class="muted-xs" style="margin-top:8px">Tools: SQL, Snowflake/Databricks, Python</div>
+            </div>
+            <!-- -->
+            <div class="project">
+              <h4 style="margin:0 0 6px 0">Retention & Cohort Analysis</h4>
+              <div class="muted-xs">Built retention logic and cohort dashboards to measure attendee return rates and campaign performance. Implemented on Power BI with Databricks tables.</div>
+              <div class="muted-xs" style="margin-top:8px">Tools: Tableau, Power BI, SQL, Databricks</div>
+            </div>
+            <!-- -->
+            <div class="project">
+              <h4 style="margin:0 0 6px 0">M Query Transformations</h4>
+              <div class="muted-xs">Power Query (M) work to standardize event codes and clean inconsistent source fields for reliable reporting. Data sourced via Databricks connection.</div>
+              <div class="muted-xs" style="margin-top:8px">Tools: Power Query (M), Power BI, Databricks</div>
+            </div>
+            <!-- -->
+            <div class="project">
+              <h4 style="margin:0 0 6px 0">Data Model — Power BI with Databricks</h4>
+              <div class="muted-xs">Relational star schema connecting Registration, Event, Revenue, Contact, Discount, and Days Out tables for scalable reporting.</div>
+              <div class="muted-xs" style="margin-top:8px">Tools: Power BI, Databricks, SQL</div>
+              <a href="POWER BI SAMPLE REPORT.pdf" style="margin:0 0 8px 0;font-size:13px;color:#0000FF" target="_blank">Sample Project</a>
+            </div>
+          </div>
+          <!-- -->
+          <div style="margin-top:14px">
+            <h3 style="margin:0 0 8px 0;font-size:13px;color:var(--muted)">Power BI data model (high-level)</h3>
+            <div class="model-list">
+              <div class="model-item"><b>Registration Table</b><div class="muted-xs">Contains registrant keys, event codes, verified dates, status flags and calculated days/out metrics.</div></div>
+              <div class="model-item"><b>Event Table</b><div class="muted-xs">Event metadata and dates used to join registrations and compute cohorts.</div></div>
+              <div class="model-item"><b>Revenue Table</b><div class="muted-xs">Monetary transactions and order-level revenue data.</div></div>
+              <div class="model-item"><b>Contact Table</b><div class="muted-xs">Registrant contact and profile attributes used for segmentation.</div></div>
+              <div class="model-item"><b>Auxiliary Tables</b><div class="muted-xs">Discount, Days Out, Weeks Out, Demo, Country_Sort and other lookup tables.</div></div>
+            </div>
+          </div>
+        </div>
+        <!-- -->
+        <div class="card" style="margin-top:16px">
+          <h2 style="margin:0 0 8px 0;font-size:16px">Experience</h2>
+          <div class="muted-xs" style="margin-bottom:8px">2022 — Present</div>
+          <div style="font-size:14px;color:#111827">Data Analyst — Current</div>
+          <p class="muted-xs" style="margin-top:6px">Working on dashboards, retention validation, ETL support and Databricks-integrated models across events and registration systems.</p>
+
+          <div style="margin-top:12px" class="muted-xs">
+            <div style="font-weight:600">Risk Analyst — Ubiquity</div>
+            <div style="margin-top:10px;font-weight:600">Admin / MIS — TechMahindra Ltd.</div>
+            <div style="margin-top:10px;font-weight:600">Computer Attendant / Technician — THE NET.COM</div>
+          </div>
+        </div>
+        <!-- -->
+        <div class="card" style="margin-top:16px">
+          <h2 style="margin:0 0 8px 0;font-size:16px">Education</h2>
+          <div style="font-size:14px;font-weight:600">BS in Information Technology — Informatics</div>
+          <div style="margin-top:8px" class="muted-xs">Computer Technician / Basic Troubleshooting — Xavier Computer Institute</div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="card">
+        <h2 style="margin:0 0 8px 0;font-size:16px">Contact & Services</h2>
+        <div class="muted-xs">I can help with dashboard builds, SQL validation, retention analysis, Databricks models and data pipeline troubleshooting.</div>
+        <div style="margin-top:12px;display:flex;gap:12px">
+          <a class="btn" href="mailto:acurinmarkjoseph@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
+          <a class="btn btn-primary" href="Resume_MarkAcurin.pdf">Request Resume (Word/Excel)</a>
+        </div>
+        <div style="margin-top:12px;font-size:12px;color:var(--muted)">Built with ♥ — Portfolio GPT helper</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
